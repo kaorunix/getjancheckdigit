@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:latest
+    steps:
+      - checkout
+      - run: 
+          name: Greeting
+          command: echo "hello w!"
+
+      - run:
+          name: Print the current time
+          command: date
